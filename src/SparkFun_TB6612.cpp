@@ -77,7 +77,7 @@ void Motor::standby()
 
 void forward(Motor motor1, Motor motor2, int speed)
 {
-	motor1.drive(speed);
+	motor1.drive(speed + 20);
 	motor2.drive(speed);
 }
 void forward(Motor motor1, Motor motor2)
@@ -90,7 +90,8 @@ void forward(Motor motor1, Motor motor2)
 void back(Motor motor1, Motor motor2, int speed)
 {
 	int temp = abs(speed);
-	motor1.drive(-temp);
+	int temp2 = abs(speed + 20);
+	motor1.drive(-temp2);
 	motor2.drive(-temp);
 }
 void back(Motor motor1, Motor motor2)
